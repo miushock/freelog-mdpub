@@ -1,0 +1,18 @@
+{
+  "name": "freelog-mdpub",
+  "main": "./lib/freelog-mdpub",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "freelog-mdpub:toggle"
+  },
+  "repository": "https://github.com/atom/freelog-mdpub",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
