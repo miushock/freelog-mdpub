@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "freelog-mdpub:toggle"
   },
-  "repository": "https://github.com/atom/freelog-mdpub",
+  "repository": "https://github.com/miushock/freelog-mdpub",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
