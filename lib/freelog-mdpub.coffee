@@ -16,6 +16,9 @@ module.exports = FreelogMdpub =
     # Register command that toggles this view
     @subscriptions.add atom.commands.add 'atom-workspace', 'freelog-mdpub:toggle': => @toggle()
 
+    # add button
+    submit_button = document.querySelector('button.freelog-submit')
+
   deactivate: ->
     @modalPanel.destroy()
     @subscriptions.dispose()
@@ -28,7 +31,10 @@ module.exports = FreelogMdpub =
     if @modalPanel.isVisible()
       @modalPanel.hide()
     else
-      editor = atom.workspace.getActiveTextEditor()
-      words = editor.getText().split(/\s+/).length
-      @freelogMdpubView.setCount(words)
+      editor = atom.workspace.getActiveTextEditor
       @modalPanel.show()
+
+  upload: ->
+    editor = atom.workspace.getActiveTextEditor()
+    user_email = document.querySelector('input.email').value
+    user_password = document.querySelector('input.password').value

@@ -17,6 +17,7 @@ class FreelogMdpubView
     #submit button
     submit_button = document.createElement('button')
     submit_button.textContent = 'submit'
+    submit_button.classList.add('freelog-submit')
 
     user_info.appendChild(user_email)
     user_info.appendChild(user_password)
