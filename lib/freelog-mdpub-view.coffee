@@ -4,16 +4,19 @@ class FreelogMdpubView
     # Create root element
     @element = document.createElement('div')
     @element.classList.add('freelog-mdpub')
+    message = document.createElement('div')
+    @element.appendChild(message)
 
     # enter user info
     user_info = document.createElement('div')
     user_info.classList.add('freelog-credential')
-
     #email and pw
     user_email = document.createElement('input')
     user_email.type = 'email'
+    user_email.classList.add('freelog-credential-email')
     user_password = document.createElement('input')
     user_password.type = 'password'
+    user_password.classList.add('freelog-credential-password')
     #submit button
     submit_button = document.createElement('button')
     submit_button.textContent = 'submit'
@@ -34,6 +37,5 @@ class FreelogMdpubView
   getElement: ->
     @element
 
-  setCount: (count) ->
-    displayText = "there are #{count} words."
-    @element.children[0].textContent = displayText
+  setMsg: (m) ->
+    @element.children[0].textContent = m
