@@ -18,6 +18,7 @@ module.exports = FreelogMdpub =
 
     # add button
     submit_button = document.querySelector('button.freelog-submit')
+    submit_button.onclick = ((_this)-> return -> _this.upload())(this)
 
   deactivate: ->
     @modalPanel.destroy()
@@ -36,5 +37,6 @@ module.exports = FreelogMdpub =
 
   upload: ->
     editor = atom.workspace.getActiveTextEditor()
-    user_email = document.querySelector('input.email').value
-    user_password = document.querySelector('input.password').value
+    user_email = document.querySelector('input.freelog-credential-email').value
+    user_password = document.querySelector('input.freelog-credential-password').value
+    @freelogMdpubView.setMsg('lalala')
