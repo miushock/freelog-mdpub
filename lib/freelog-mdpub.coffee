@@ -39,17 +39,18 @@ module.exports = FreelogMdpub =
     editor = atom.workspace.getActiveTextEditor()
     user_email = document.querySelector('input.freelog-credential-email').value
     user_password = document.querySelector('input.freelog-credential-password').value
-
+    if editor = atom.workspace.getActiveTextEditor()
+      content = editor.getText()
     # submit via request
     request = require('request')
-    done = this.aysnc();
     resource = {
       resource: {
         resource_type: 'markdown',
-        meta: '',
+        meta: {},
         name: 'whatever'
+        mime_type: 'text/plain'
         sharing_policy: '{}',
-        content: 'nothing yet'
+        content: content
       }
     }
 
@@ -61,7 +62,5 @@ module.exports = FreelogMdpub =
         body:resource
       },
       (err, response, body) ->
-        if (err) {
-          console.error('upload failed:', err);
-        }
-    ).auth('miushock@gmail.com','840304')
+        if (err) then alert(err) else alert(response)
+    ).auth(user_email,user_password)
