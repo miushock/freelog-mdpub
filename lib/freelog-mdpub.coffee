@@ -1,5 +1,6 @@
 FreelogMdpubView = require './freelog-mdpub-view'
 {CompositeDisposable} = require 'atom'
+# Request = require 'request'
 
 module.exports = FreelogMdpub =
   freelogMdpubView: null
@@ -39,4 +40,4 @@ module.exports = FreelogMdpub =
     editor = atom.workspace.getActiveTextEditor()
     user_email = document.querySelector('input.freelog-credential-email').value
     user_password = document.querySelector('input.freelog-credential-password').value
-    @freelogMdpubView.setMsg('lalala')
+    @freelogMdpubView.setMsg('mukakak')
