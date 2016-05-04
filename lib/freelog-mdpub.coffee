@@ -1,5 +1,6 @@
 FreelogMdpubView = require './freelog-mdpub-view'
 {CompositeDisposable} = require 'atom'
+# Request = require 'request'
 
 module.exports = FreelogMdpub =
   freelogMdpubView: null
